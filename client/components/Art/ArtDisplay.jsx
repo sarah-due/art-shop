@@ -4,8 +4,9 @@ import {Link} from 'react-router-dom'
 import {getArt} from '../../actions/art'
 
 const renderAllArt = (art, key) => (
-  <div>
+  <div className="art-display">
     <img src={art.image}/>
+    <p>{art.title}</p>
   </div>
 )
 
@@ -17,7 +18,7 @@ class ArtDisplay extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="art-display-container">
         {this.props.art.map((item, key) => {
           return renderAllArt(item, key)
           })
