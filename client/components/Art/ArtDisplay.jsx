@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {getArt} from '../../actions/art'
 
 const renderAllArt = (art, key) => (
-  <div className="art-display-item">
+  <div className="art-display-item" key={key}>
     <div className="image-placeholder"></div>
     <p className="art-display-item__details">{art.title}</p>
     <p className="art-display-item__price">{art.price}</p>
@@ -33,7 +33,6 @@ class ArtDisplay extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {art: state.art}
 }
 

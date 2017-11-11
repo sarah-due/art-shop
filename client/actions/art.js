@@ -10,7 +10,7 @@ export const receiveArt = (art) => {
 
 export function getArt() {
   return (dispatch) => {
-        if (err) {
+        if (error) {
           console.error(err.message)
           return
         }
