@@ -8,6 +8,11 @@ const renderAllArt = (art, key) => (
     <div className="image-placeholder"></div>
     <p className="art-display-item__details">{art.title}</p>
     <p className="art-display-item__price">{art.price}</p>
+    <Link to={`/art/${art.id}`}>
+      <button className = "art-display-item__button">
+        Get a closer look
+      </button>
+    </Link>
   </div>
 )
 
