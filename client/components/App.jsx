@@ -6,7 +6,6 @@ import ArtDisplay from './Art/ArtDisplay'
 const App = () => (
   <Router>
     <div className='app-container'>
-      <h1>Hello World</h1>
       <ArtDisplay />
     </div>
   </Router>

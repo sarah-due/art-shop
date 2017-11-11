@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 import {getArt} from '../../actions/art'
 
 const renderAllArt = (art, key) => (
-  <div className="art-display">
-    <img src={art.image}/>
-    <p>{art.title}</p>
+  <div className="art-display-item">
+    <div className="image-placeholder"></div>
+    <p className="art-display-item__details">{art.title}</p>
+    <p className="art-display-item__price">{art.price}</p>
   </div>
 )
 
@@ -19,10 +20,13 @@ class ArtDisplay extends React.Component {
 
     return (
       <div className="art-display-container">
-        {this.props.art.map((item, key) => {
-          return renderAllArt(item, key)
-          })
-        }
+        <h2>Pieces for Sale!</h2>
+        <div className="art-display-grid">
+          {this.props.art.map((item, key) => {
+            return renderAllArt(item, key)
+            })
+          }
+        </div>
       </div>
     )
   }
